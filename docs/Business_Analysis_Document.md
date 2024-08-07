@@ -16,8 +16,11 @@ The Environmental Compliance Management System (ECMS) aims to address the need f
 ## 2. Project Objectives
 
 Develop a scalable and secure PWA.
+
 Implement real-time monitoring and alerting.
+
 Provide comprehensive reporting and dashboard functionality.
+
 Integrate geospatial analysis tools.
 
 ---
