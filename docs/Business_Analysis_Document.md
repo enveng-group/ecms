@@ -50,9 +50,13 @@ The key stakeholders for the Environmental Compliance Management System (ECMS) p
 
 ### Functional Requirements
 **Real-Time Monitoring and Alerts**: The system should provide real-time monitoring of compliance data and alert stakeholders of any deviations.
+
 **Geospatial Data Visualization**: Integration of geospatial analysis tools to visualize environmental data on maps.
+
 **Reporting and Dashboard Functionality**: Generate comprehensive reports and provide interactive dashboards for data analysis.
+
 **User Management**: Allow administrators to manage user roles and permissions.
+
 **Data Import and Export**: Facilitate data import from various sources and export to different formats.
 
 ### Non-Functional Requirements
