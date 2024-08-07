@@ -1,9 +1,9 @@
 # Business Analysis Document
 
-## Project Name: [Your Project Name]
+## Project Name: Environmental Compliance Management System
 
-### Author: [Business Analyst Name]
-### Date: [Date]
+### Author: Kinley Zangmo
+### Date: 07-08-2024
 
 ---
 
@@ -15,14 +15,23 @@ Provide a high-level overview of the project, including its purpose, scope, and 
 
 ## 2. Project Objectives
 
-List the main objectives of the project.
+Develop a scalable and secure PWA.
+Implement real-time monitoring and alerting.
+Provide comprehensive reporting and dashboard functionality.
+Integrate geospatial analysis tools.
 
 ---
 
 ## 3. Stakeholder Analysis
 
 ### Stakeholder Identification
-Identify the key stakeholders involved in the project.
+### Key Stakeholders
+Environmental Compliance Officers
+Regulatory Bodies
+Company Management
+IT Department
+End Users
+External Auditors
 
 ### Stakeholder Needs
 Outline the needs and expectations of each stakeholder.
