@@ -456,7 +456,6 @@ recurring_status --> recurring_status_data
 ```
 
 ### Process Descriptions
-Provide detailed descriptions of each business process.
 These descriptions provide a comprehensive overview of each step involved in the form data entry and management process.
 
 ### 1. **Form Access and User Interaction**
