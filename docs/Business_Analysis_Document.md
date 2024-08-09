@@ -79,75 +79,216 @@ The key stakeholders for the Environmental Compliance Management System (ECMS) p
 
 ### Use Case Diagram
 Include a use case diagram to illustrate the interactions between users and the system.
-## 5. Use Case Analysis
-
-### Use Case Diagram
-Include a use case diagram to illustrate the interactions between users and the system.
-
-# Use Case Diagram for Environmental Compliance Management System (ECMS)
 
 ```mermaid
-%% Use Case Diagram for Environmental Compliance Management System (ECMS)
-%% Define actors and use cases
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#6b8e23', 'edgeLabelBackground':'#ffffff', 'tertiaryColor': '#8fbc8f'}}}%%
+graph TD
+    A[User] -->|View Dashboard| B[Interactive Dashboard]
+    A -->|Submit Form| C[Form Page]
+    A -->|Perform CRUD Operations| D[CRUD Interface]
+    A -->|Login| E[Authentication System]
+    A -->|Access Admin Panel| F[Admin Management]
+    B -->|Fetch Data| G[SQLite3 Database]
+    C -->|Add Data| G
+    D -->|Modify Data| G
+    E -->|Authorize Access| F
+    F -->|Manage Users| E
+    F -->|Modify Visuals| B
+    F -->|Manage Forms| C
+    F -->|Admin Tasks| G
 
-%% Actors
-actor EnvironmentalComplianceOfficer as ECO
-actor RegulatoryBody as RB
-actor CompanyManagement as CM
-actor ITDepartment as ITD
-actor EndUser as EU
-actor ExternalAuditor as EA
+    subgraph Primary Stakeholders
+        H[Environmental Compliance Officers]
+        I[Regulatory Bodies]
+        J[Company Management]
+    end
 
-%% Use Cases
-usecase RTMonitoringAlerts as "Real-Time Monitoring and Alerts"
-usecase GeospatialAnalysis as "Geospatial Data Visualization"
-usecase ReportingDashboard as "Reporting and Dashboard Functionality"
-usecase UserManagement as "User Management"
-usecase DataImportExport as "Data Import and Export"
+    subgraph Secondary Stakeholders
+        K[IT Department]
+        L[End Users]
+        M[External Auditors]
+    end
 
-%% Relationships
-ECO --> RTMonitoringAlerts
-ECO --> GeospatialAnalysis
-ECO --> ReportingDashboard
-
-RB --> ReportingDashboard
-
-CM --> ReportingDashboard
-
-ITD --> RTMonitoringAlerts
-ITD --> UserManagement
-ITD --> DataImportExport
-
-EU --> RTMonitoringAlerts
-EU --> ReportingDashboard
-
-EA --> ReportingDashboard
-
-%% Non-Functional Requirements (as notes)
-note right of RTMonitoringAlerts
-    Security
-    Scalability
-    Performance
-    Reliability
-    Usability
-    Compatibility
-end note
+    H -->|Ensure Compliance| B
+    I -->|Regulate| B
+    J -->|Oversee| B
+    K -->|Support| F
+    L -->|Use| B
+    M -->|Audit| G
 ```
 
-# Use Case Diagram for Environmental Compliance Management System (ECMS)
-## 5. Use Case Analysis
-
-### Use Case Diagram
-Include a use case diagram to illustrate the interactions between users and the system.
-
-# Use Case Diagram for Environmental Compliance Management System (ECMS)
-## 5. Use Case Analysis
-
-### Use Case Diagram
-Include a use case diagram to illustrate the interactions between users and the system.
-
 ### Use Case Descriptions
-Provide detailed descriptions of each use case.
+
+### 1. View Dashboard
+**Description:** Users can view the interactive reporting dashboard, which displays data through various diagrams and charts.
+
+**Actors:** End Users, Environmental Compliance Officers, Regulatory Bodies, Company Management
+
+**Preconditions:** User must be logged in.
+
+**Postconditions:** User can see visual representations of data and interact with the dashboard to drill down into detailed data.
+
+### 2. Submit Form
+**Description:** Users can submit forms to add new data to the SQLite3 database.
+
+**Actors:** End Users, Environmental Compliance Officers
+
+**Preconditions:** User must be logged in and have the necessary permissions.
+
+**Postconditions:** New data is added to the database, and the dashboard is updated accordingly.
+
+### 3. Perform CRUD Operations
+**Description:** Users can create, read, update, and delete database rows through the interface.
+
+**Actors:** End Users, Environmental Compliance Officers, IT Department
+
+**Preconditions:** User must be logged in and have the necessary permissions.
+
+**Postconditions:** Database records are created, read, updated, or deleted as per the user's actions.
+
+### 4. Login
+**Description:** Users can log in to the system using their credentials.
+
+**Actors:** End Users, Environmental Compliance Officers, Regulatory Bodies, Company Management, IT Department, External Auditors
+
+**Preconditions:** User must have valid login credentials.
+
+**Postconditions:** User is authenticated and granted access to the system based on their role.
+
+### 5. Access Admin Panel
+**Description:** Admin users can access the admin panel to manage users, roles, and application settings.
+
+**Actors:** Company Management, IT Department
+
+**Preconditions:** User must be logged in and have admin privileges.
+
+**Postconditions:** Admin can manage users, roles, and settings, and perform higher-level tasks.
+
+### 6. Fetch Data
+**Description:** The dashboard fetches data from the SQLite3 database to display in charts and diagrams.
+
+**Actors:** Interactive Dashboard
+
+**Preconditions:** Data must be available in the database.
+
+**Postconditions:** Data is fetched and displayed on the dashboard.
+
+### 7. Add Data
+**Description:** The form page adds new data to the SQLite3 database upon form submission.
+
+**Actors:** Form Page
+
+**Preconditions:** Form must be correctly filled out and submitted.
+
+**Postconditions:** New data is added to the database.
+
+### 8. Modify Data
+**Description:** Users can modify existing data in the SQLite3 database through the CRUD interface.
+
+**Actors:** CRUD Interface
+
+**Preconditions:** User must have the necessary permissions to modify data.
+
+**Postconditions:** Existing data is updated in the database.
+
+### 9. Authorize Access
+**Description:** The authentication system authorizes user access to various parts of the application based on their role.
+
+**Actors:** Authentication System
+
+**Preconditions:** User must be logged in.
+
+**Postconditions:** User is granted or denied access to specific features based on their role.
+
+### 10. Manage Users
+**Description:** Admin users can manage user accounts, including creating, updating, and deleting users.
+
+**Actors:** Admin Management
+
+**Preconditions:** Admin must be logged in and have the necessary permissions.
+
+**Postconditions:** User accounts are managed as per admin actions.
+
+### 11. Modify Visuals
+**Description:** Admin users can modify the visuals on the dashboard without writing code.
+
+**Actors:** Admin Management
+
+**Preconditions:** Admin must be logged in and have the necessary permissions.
+
+**Postconditions:** Dashboard visuals are updated as per admin actions.
+
+### 12. Manage Forms
+**Description:** Admin users can manage the form page, including adding, updating, and deleting forms.
+
+**Actors:** Admin Management
+
+**Preconditions:** Admin must be logged in and have the necessary permissions.
+
+**Postconditions:** Form pages are managed as per admin actions.
+
+### 13. Admin Tasks
+**Description:** Admin users can perform higher-level tasks such as user access control and database schema modifications.
+
+**Actors:** Admin Management
+
+**Preconditions:** Admin must be logged in and have the necessary permissions.
+
+**Postconditions:** Higher-level admin tasks are completed as per admin actions.
+
+### 14. Ensure Compliance
+**Description:** Environmental Compliance Officers ensure that the data and reports comply with environmental regulations.
+
+**Actors:** Environmental Compliance Officers
+
+**Preconditions:** Officers must have access to the dashboard and data.
+
+**Postconditions:** Compliance is ensured through data analysis and reporting.
+
+### 15. Regulate
+**Description:** Regulatory Bodies oversee and regulate the data and reports to ensure they meet legal standards.
+
+**Actors:** Regulatory Bodies
+
+**Preconditions:** Regulatory Bodies must have access to the dashboard and data.
+
+**Postconditions:** Data and reports are regulated to meet legal standards.
+
+### 16. Oversee
+**Description:** Company Management oversees the overall functionality and usage of the dashboard.
+
+**Actors:** Company Management
+
+**Preconditions:** Management must have access to the dashboard and admin panel.
+
+**Postconditions:** The dashboard is used effectively for company operations.
+
+### 17. Support
+**Description:** The IT Department provides technical support for the dashboard and its components.
+
+**Actors:** IT Department
+
+**Preconditions:** IT Department must have access to the admin panel and system components.
+
+**Postconditions:** Technical issues are resolved, and the system runs smoothly.
+
+### 18. Use
+**Description:** End Users interact with the dashboard to view and analyze data.
+
+**Actors:** End Users
+
+**Preconditions:** Users must be logged in and have the necessary permissions.
+
+**Postconditions:** Users can view and analyze data through the dashboard.
+
+### 19. Audit
+**Description:** External Auditors audit the data and reports to ensure accuracy and compliance.
+
+**Actors:** External Auditors
+
+**Preconditions:** Auditors must have access to the dashboard and data.
+
+**Postconditions:** Data and reports are audited for accuracy and compliance.
 
 ---
 
