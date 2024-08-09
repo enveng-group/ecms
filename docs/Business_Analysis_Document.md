@@ -456,6 +456,54 @@ recurring_status --> recurring_status_data
 ```
 
 ### Process Descriptions
+Explanation of each business process represented in your flowchart:
+
+### 1. **Accountability**
+This table tracks who is responsible for various aspects of the project. It includes entities like Perdaman, SCJV, MRWA, and subcontractors.
+
+### 2. **Actions Status**
+This table monitors the status of actions related to the project, such as whether they are overdue, completed, in progress, or not started.
+
+### 3. **Environmental Aspects**
+This table identifies different environmental aspects that need to be considered, such as air quality, threatened species, cultural heritage, and waste management.
+
+### 4. **Environmental Mechanisms**
+This table lists the mechanisms or plans in place to manage environmental aspects, such as the Construction Environmental Management Plan, Flora Management Plan, and the Environmental Protection Act 1986.
+
+### 5. **Inspection Frequency**
+This table specifies how often inspections should occur, such as weekly, monthly, or quarterly.
+
+### 6. **Inspection Scheduling**
+This table schedules inspections and links them to supporting information, inspection frequency, and whether inspections are required.
+
+### 7. **Inspections Yes/No**
+This table indicates whether inspections are required for a particular obligation.
+
+### 8. **Project Information**
+This table contains general information about the project, including accountability, environmental aspects, environmental mechanisms, and project phases.
+
+### 9. **Project Phases**
+This table outlines the different phases of the project, such as planning, development, construction, operation, and decommissioning.
+
+### 10. **Recurring Frequency**
+This table specifies the frequency of recurring obligations, such as daily, weekly, or monthly.
+
+### 11. **Recurring Obligation Yes/No**
+This table indicates whether there are recurring obligations for a particular aspect of the project.
+
+### 12. **Recurring Obligations**
+This table tracks recurring obligations and links them to project information, recurring obligation status, and frequency.
+
+### 13. **Recurring Status**
+This table monitors the status of recurring obligations, such as whether they are pending, active, or closed.
+
+### 14. **Supporting Information**
+This table provides additional information to support various obligations and links them to project information.
+
+### 15. **Action Comments**
+This table contains comments related to actions and links them to the status of actions and supporting information.
+
+
 These descriptions provide a comprehensive overview of each step involved in the form data entry and management process.
 
 ### 1. **Form Access and User Interaction**
