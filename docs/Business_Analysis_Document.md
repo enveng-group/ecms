@@ -134,7 +134,7 @@ note right of RTMonitoringAlerts
     Usability
     Compatibility
 end note
-
+```
 
 ### Use Case Descriptions
 Provide detailed descriptions of each use case.
