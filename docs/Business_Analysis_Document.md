@@ -297,6 +297,164 @@ graph TD
 ### Process Flow Diagrams
 Include process flow diagrams to visualize the business processes.
 
+```mermaid
+flowchart TB
+
+%% Tables
+accountability[Accountability]
+actions_status[Actions Status]
+environmental_aspects[Environmental Aspects]
+environmental_mechanisms[Environmental Mechanisms]
+inspection_frequency[Inspection Frequency]
+inspection_scheduling[Inspection Scheduling]
+inspections_yes_or_no[Inspections Yes/No]
+project_information[Project Information]
+project_phases[Project Phases]
+recurring_frequency[Recurring Frequency]
+recurring_obligation_yes_or_no[Recurring Obligation Yes/No]
+recurring_obligations[Recurring Obligations]
+recurring_status[Recurring Status]
+supporting_information[Supporting Information]
+action_comments[Action Comments]
+
+%% Relations
+inspection_scheduling --|obligation_number|--> supporting_information
+inspection_scheduling --|inspection_frequency_id|--> inspection_frequency
+inspection_scheduling --|inspection_id|--> inspections_yes_or_no
+project_information --|accountability_id|--> accountability
+project_information --|env_aspet_id|--> environmental_aspects
+project_information --|primary_env_mechanism_id|--> environmental_mechanisms
+project_information --|project_phase_id|--> project_phases
+recurring_obligations --|obligation_number|--> project_information
+recurring_obligations --|recurring_obligation_id|--> recurring_obligation_yes_or_no
+recurring_obligations --|recurring_frequency_id|--> recurring_frequency
+recurring_obligations --|recurring_status_id|--> recurring_status
+supporting_information --|obligation_number|--> project_information
+action_comments --|status_id|--> actions_status
+action_comments --|obligation_number|--> supporting_information
+
+%% Data Entries
+subgraph accountability_data
+    accountability_id1(Accountability 1: Perdaman)
+    accountability_id2(Accountability 2: SCJV)
+    accountability_id3(Accountability 3: SCJV during construction/Perdaman during operations)
+    accountability_id4(Accountability 4: MRWA)
+    accountability_id5(Accountability 5: Subcontractor)
+end
+
+subgraph actions_status_data
+    status_id1(Actions Status 1: None)
+    status_id2(Actions Status 2: Overdue)
+    status_id3(Actions Status 3: Completed)
+    status_id4(Actions Status 4: In progress)
+    status_id5(Actions Status 5: Not started)
+end
+
+subgraph environmental_aspects_data
+    aspect_id1(Aspect 1: Limitations and extent of proposal)
+    aspect_id2(Aspect 2: Design and construction/installation requirements)
+    aspect_id3(Aspect 3: Threatened Species)
+    aspect_id4(Aspect 4: Cultural Heritage)
+    aspect_id5(Aspect 5: Air Quality)
+    aspect_id6(Aspect 6: Greenhouse Gas)
+    aspect_id7(Aspect 7: Flora & Vegetation)
+    aspect_id8(Aspect 8: Terrestrial Fauna)
+    aspect_id9(Aspect 9: Hydrogeology)
+    aspect_id10(Aspect 10: Acid Sulfate Soils)
+    aspect_id11(Aspect 11: Surface Water)
+    aspect_id12(Aspect 12: Marine Waters)
+    aspect_id13(Aspect 13: Lighting)
+    aspect_id14(Aspect 14: Pests)
+    aspect_id15(Aspect 15: Waste Management)
+    aspect_id16(Aspect 16: Weeds)
+    aspect_id17(Aspect 17: Time Limited Operations)
+    aspect_id18(Aspect 18: Construction Environmental Management Plan)
+    aspect_id19(Aspect 19: Decommissioning & Rehabilitation)
+    aspect_id20(Aspect 20: Environmental Performance Report)
+    aspect_id21(Aspect 21: Audit and reporting)
+    aspect_id22(Aspect 22: Compliance Reporting)
+    aspect_id23(Aspect 23: Environmental Offsets)
+    aspect_id24(Aspect 24: Administration)
+    aspect_id25(Aspect 25: Records)
+    aspect_id26(Aspect 26: Public Availability of Data)
+    aspect_id27(Aspect 27: Contaminated Sites)
+    aspect_id28(Aspect 28: Incidents)
+    aspect_id29(Aspect 29: Monitoring)
+end
+
+subgraph environmental_mechanisms_data
+    mechanism_id1(Mechanism 1: MS 1180)
+    mechanism_id2(Mechanism 2: EPBC)
+    mechanism_id3(Mechanism 3: MS 0594)
+    mechanism_id4(Mechanism 4: Section 18)
+    mechanism_id5(Mechanism 5: W6630/2021/1)
+    mechanism_id6(Mechanism 6: City of Karratha Approval Act 2005)
+    mechanism_id7(Mechanism 7: Construction Environmental Management Plan)
+    mechanism_id8(Mechanism 8: Cultural Heritage Management Plan)
+    mechanism_id9(Mechanism 9: Flora Management Plan)
+    mechanism_id10(Mechanism 10: Fauna Management Plan)
+    mechanism_id11(Mechanism 11: Greenhouse Gas Emissions Management Plan)
+    mechanism_id12(Mechanism 12: Light Management Plan)
+    mechanism_id13(Mechanism 13: Pest Management Plan)
+    mechanism_id14(Mechanism 14: Project Environmental Management Plan)
+    mechanism_id15(Mechanism 15: Solid and Liquid Waste Management Plan)
+    mechanism_id16(Mechanism 16: Surface Water Management Plan)
+    mechanism_id17(Mechanism 17: Threatened Species Management Plan)
+    mechanism_id18(Mechanism 18: Weed Management Plan)
+    mechanism_id19(Mechanism 19: Impact Reconciliation Procedure)
+    mechanism_id20(Mechanism 20: Biodiversity Conservation Act 2016)
+    mechanism_id21(Mechanism 21: Environmental Protection Act 1986)
+end
+
+subgraph project_phases_data
+    phase_id1(Project Phase 1: Planning)
+    phase_id2(Project Phase 2: Development)
+    phase_id3(Project Phase 3: Construction)
+    phase_id4(Project Phase 4: Operation)
+    phase_id5(Project Phase 5: Decommissioning)
+end
+
+subgraph inspection_frequency_data
+    frequency_id1(Inspection Frequency 1: Weekly)
+    frequency_id2(Inspection Frequency 2: Monthly)
+    frequency_id3(Inspection Frequency 3: Quarterly)
+end
+
+subgraph inspections_yes_or_no_data
+    inspection_id1(Inspection Yes/No 1: Yes)
+    inspection_id2(Inspection Yes/No 2: No)
+end
+
+subgraph recurring_frequency_data
+    recurring_frequency_id1(Recurring Frequency 1: Daily)
+    recurring_frequency_id2(Recurring Frequency 2: Weekly)
+    recurring_frequency_id3(Recurring Frequency 3: Monthly)
+end
+
+subgraph recurring_obligation_yes_or_no_data
+    recurring_obligation_id1(Recurring Obligation Yes/No 1: Yes)
+    recurring_obligation_id2(Recurring Obligation Yes/No 2: No)
+end
+
+subgraph recurring_status_data
+    recurring_status_id1(Recurring Status 1: Pending)
+    recurring_status_id2(Recurring Status 2: Active)
+    recurring_status_id3(Recurring Status 3: Closed)
+end
+
+%% Connecting Data Entries to Tables
+accountability --> accountability_data
+actions_status --> actions_status_data
+environmental_aspects --> environmental_aspects_data
+environmental_mechanisms --> environmental_mechanisms_data
+project_phases --> project_phases_data
+inspection_frequency --> inspection_frequency_data
+inspections_yes_or_no --> inspections_yes_or_no_data
+recurring_frequency --> recurring_frequency_data
+recurring_obligation_yes_or_no --> recurring_obligation_yes_or_no_data
+recurring_status --> recurring_status_data
+```
+
 ### Process Descriptions
 Provide detailed descriptions of each business process.
 
