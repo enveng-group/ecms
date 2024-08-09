@@ -131,8 +131,7 @@ note right of RTMonitoringAlerts
     Reliability
     Usability
     Compatibility
-end note
-mermaid```
+end note ```
 
 # Use Case Diagram for Environmental Compliance Management System (ECMS)
 ## 5. Use Case Analysis
