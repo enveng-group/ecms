@@ -81,6 +81,14 @@ The key stakeholders for the Environmental Compliance Management System (ECMS) p
 Include a use case diagram to illustrate the interactions between users and the system.
 
 # Use Case Diagram for Environmental Compliance Management System (ECMS)
+## 5. Use Case Analysis
+
+### Use Case Diagram
+Include a use case diagram to illustrate the interactions between users and the system.
+
+# Use Case Diagram for Environmental Compliance Management System (ECMS)
+
+```mermaid
 %% Use Case Diagram for Environmental Compliance Management System (ECMS)
 %% Define actors and use cases
 
