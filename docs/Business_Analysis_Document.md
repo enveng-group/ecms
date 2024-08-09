@@ -81,8 +81,6 @@ The key stakeholders for the Environmental Compliance Management System (ECMS) p
 Include a use case diagram to illustrate the interactions between users and the system.
 
 # Use Case Diagram for Environmental Compliance Management System (ECMS)
-
-```mermaid
 %% Use Case Diagram for Environmental Compliance Management System (ECMS)
 %% Define actors and use cases
 
@@ -121,15 +119,13 @@ EA --> ReportingDashboard
 
 %% Non-Functional Requirements (as notes)
 note right of RTMonitoringAlerts
-    - Security
-    - Scalability
-    - Performance
-    - Reliability
-    - Usability
-    - Compatibility
+    Security
+    Scalability
+    Performance
+    Reliability
+    Usability
+    Compatibility
 end note
-
----
 
 
 ### Use Case Descriptions
